@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Every Corner Tees — Custom T-Shirts for Events &amp; Weddings in Toronto</title>
+  <meta name="description" content="Every Corner Tees makes custom t-shirts for weddings, events, and businesses in the Greater Toronto Area. Every shirt can be unique — you give us the design, we handle the rest.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="logo">Every Corner Tees</a>
+    <a href="#quote" class="nav-cta">Get a quote</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Toronto's custom tee shop</p>
+      <h1>Every shirt<br>tells a story.</h1>
+      <p class="hero-sub">Weddings, events, businesses — you bring the design, we press it onto shirts. Every shirt can be completely unique.</p>
+      <a href="#quote" class="btn-primary">Request a quote →</a>
+    </div>
+    <div class="hero-tags">
+      <span>Weddings</span>
+      <span>Corporate events</span>
+      <span>Bachelorettes</span>
+      <span>Family reunions</span>
+      <span>Birthdays</span>
+      <span>Unique per-shirt designs</span>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Send us your designs</h3>
+          <p>Upload your artwork using the form below — one design or a different one for every shirt. PNG, PDF, AI, and PSD all welcome.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>We confirm &amp; quote</h3>
+          <p>We'll review your order and send a quote within 24 hours. Once approved, we get to work.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Pick up your shirts</h3>
+          <p>We press every shirt with care. Pick up locally in the GTA or arrange delivery for your event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT MAKES US DIFFERENT -->
+  <section class="diff">
+    <div class="container diff-inner">
+      <div class="diff-text">
+        <h2>Not just bulk printing.</h2>
+        <p>Most print shops only do one design for the whole order. We specialize in orders where <strong>every shirt is different</strong> — like a wedding where each guest gets a shirt with their own dog's face on it.</p>
+        <p>If you have a vision, we can make it real.</p>
+      </div>
+      <div class="diff-stat">
+        <div class="stat">
+          <span class="stat-num">19</span>
+          <span class="stat-label">unique designs in one wedding order</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="quote-section" id="quote">
+    <div class="container">
+      <h2>Request a quote</h2>
+      <p class="form-intro">Fill this out and we'll get back to you within 24 hours. Upload your designs right here — no need to email separately.</p>
+
+      <form id="quote-form" enctype="multipart/form-data">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name *</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(416) 555-0100">
+          </div>
+          <div class="form-group">
+            <label for="event_type">Type of event</label>
+            <select id="event_type" name="event_type">
+              <option value="">Select one…</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Bachelorette / Bachelor">Bachelorette / Bachelor</option>
+              <option value="Birthday">Birthday</option>
+              <option value="Corporate event">Corporate event</option>
+              <option value="Family reunion">Family reunion</option>
+              <option value="Sports team">Sports team</option>
+              <option value="School / club">School / club</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Number of shirts</label>
+            <input type="number" id="quantity" name="quantity" placeholder="e.g. 20" min="1">
+          </div>
+          <div class="form-group">
+            <label for="deadline">When do you need them by?</label>
+            <input type="date" id="deadline" name="deadline">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Shirt sizes needed (select all that apply)</label>
+          <div class="size-grid">
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="XS"> XS</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="S"> S</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="M"> M</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="L"> L</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="XL"> XL</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="2XL"> 2XL</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="3XL"> 3XL</label>
+            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Kids"> Kids</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="designs">Upload your designs</label>
+          <div class="upload-area" id="upload-area">
+            <input type="file" id="designs" name="designs" multiple accept=".png,.jpg,.jpeg,.gif,.pdf,.ai,.svg,.eps,.psd" style="display:none">
+            <div class="upload-inner" id="upload-trigger">
+              <div class="upload-icon">↑</div>
+              <p>Drag files here or <span class="upload-link">browse</span></p>
+              <p class="upload-hint">PNG, JPG, PDF, AI, PSD, SVG — up to 50 MB total</p>
+            </div>
+            <div id="file-list" class="file-list"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your vision — shirt colours, placement of design (front/back/sleeve), whether each shirt needs a different design, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary btn-submit" id="submit-btn">Send quote request →</button>
+
+        <div id="form-success" class="form-message success" style="display:none">
+          🎉 Got it! We'll be in touch within 24 hours.
+        </div>
+        <div id="form-error" class="form-message error" style="display:none">
+          Something went wrong. Email us directly at <a href="mailto:hello@everycornertees.ca">hello@everycornertees.ca</a>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo">Every Corner Tees</span>
+        <p>Custom t-shirts for events &amp; weddings.<br>Greater Toronto Area.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://instagram.com/everycornertees" target="_blank" rel="noopener">@everycornertees on Instagram</a>
+        <a href="mailto:hello@everycornertees.ca">hello@everycornertees.ca</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Every Corner Tees. Toronto, ON.</span>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>
