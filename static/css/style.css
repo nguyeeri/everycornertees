@@ -176,6 +176,63 @@ nav {
 /* ── SHARED CONTAINER ── */
 .container { max-width: 960px; margin: 0 auto; padding: 0 40px; }
 
+/* ── WHO WE SERVE ── */
+.serve {
+  padding: 88px 0;
+  background: var(--white);
+  border-bottom: 2px solid var(--ink);
+}
+
+.serve .section-label { margin-bottom: 10px; }
+
+.serve h2 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  color: var(--ink);
+}
+
+.serve-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.serve-card {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 28px 24px;
+  transition: border-color 0.15s;
+}
+
+.serve-card:hover { border-color: var(--accent); }
+
+.serve-icon {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.serve-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.serve-card p {
+  font-size: 0.85rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+
 /* ── HOW IT WORKS ── */
 .how { padding: 88px 0; background: var(--white); }
 
@@ -537,6 +594,7 @@ footer {
   .step:last-child { border-bottom: none; }
   .diff { padding: 60px 20px; }
   .diff-inner { flex-direction: column; gap: 40px; }
+  .serve-grid { grid-template-columns: repeat(2, 1fr); }
   .form-row { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; gap: 24px; }
   .footer-links { align-items: flex-start; }
