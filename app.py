@@ -1,9 +1,4 @@
 import os
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email.mime.text import MIMEText
-from email import encoders
 from flask import Flask, render_template, request, jsonify
 from werkzeug.utils import secure_filename
 
@@ -63,33 +58,31 @@ Notes / details:
 Files attached: {len(attachments)}
 """
 
-        # Send email (configure via environment variables)
-        smtp_host = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
-        smtp_port = int(os.environ.get('SMTP_PORT', 587))
-        smtp_user = os.environ.get('SMTP_USER', '')
-        smtp_pass = os.environ.get('SMTP_PASS', '')
-        to_email  = os.environ.get('TO_EMAIL', smtp_user)
+        # Send email via Resend
+        import resend
+        resend.api_key = os.environ.get('RESEND_API_KEY', '')
 
-        if smtp_user and smtp_pass:
-            msg = MIMEMultipart()
-            msg['From']    = smtp_user
-            msg['To']      = to_email
-            msg['Subject'] = f'New Quote Request — {name} ({quantity} shirts)'
-            msg['Reply-To'] = email
+        to_email = os.environ.get('TO_EMAIL', '')
 
-            msg.attach(MIMEText(body, 'plain'))
-
+        if resend.api_key and to_email:
+            attachments_data = []
             for filename, file_data, content_type in attachments:
-                part = MIMEBase('application', 'octet-stream')
-                part.set_payload(file_data)
-                encoders.encode_base64(part)
-                part.add_header('Content-Disposition', f'attachment; filename="{filename}"')
-                msg.attach(part)
+                import base64
+                attachments_data.append({
+                    "filename": filename,
+                    "content": base64.b64encode(file_data).decode('utf-8')
+                })
 
-            with smtplib.SMTP(smtp_host, smtp_port) as server:
-                server.starttls()
-                server.login(smtp_user, smtp_pass)
-                server.send_message(msg)
+            params = {
+                "from": "Every Corner Tees <onboarding@resend.dev>",
+                "to": [to_email],
+                "reply_to": email,
+                "subject": f"New Quote Request — {name} ({quantity} shirts)",
+                "text": body,
+                "attachments": attachments_data
+            }
+
+            resend.Emails.send(params)
 
         return jsonify({'success': True})
 
