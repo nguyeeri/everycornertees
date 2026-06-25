@@ -651,3 +651,72 @@ footer {
   color: rgba(255,255,255,0.4);
   margin-top: 8px;
 }
+
+/* ── NAV LOGO IMAGE ── */
+.nav-logo-img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* ── STEP BEAR IMAGES ── */
+.step-bear {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+}
+
+.step-bear img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ── QUOTE HEADER WITH BEAR ── */
+.quote-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.quote-bear {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.quote-bear img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── FOOTER BEAR ── */
+.footer-center {
+  flex-shrink: 0;
+}
+
+.footer-bear {
+  width: 100px;
+  height: auto;
+  display: block;
+  opacity: 0.85;
+}
+
+/* ── FOOTER LINKS EXTRA ── */
+.footer-links span {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.35);
+}
+
+@media (max-width: 700px) {
+  .quote-header { flex-direction: column; }
+  .quote-bear { display: none; }
+  .footer-center { display: none; }
+  .step-bear { width: 60px; height: 60px; }
+}

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Every Corner Tees — Custom T-Shirts Toronto</title>
   <meta name="description" content="Custom t-shirts for weddings, events, businesses and teams in the Greater Toronto Area. DTF printing, mockups included, front and back available.">
+  <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -13,7 +15,10 @@
 <body>
 
   <nav>
-    <a href="/" class="logo">Every Corner <span>Tees</span></a>
+    <a href="/" class="logo">
+      <img src="/static/img/favicon-32.png" alt="" class="nav-logo-img">
+      Every Corner <span>Tees</span>
+    </a>
     <a href="#quote" class="nav-cta">Get a quote</a>
   </nav>
 
@@ -21,11 +26,11 @@
     <div class="hero-content">
       <p class="eyebrow">Toronto custom tees</p>
       <h1>Your event.<br><em>Our prints.</em></h1>
-      <p class="hero-sub">You bring the design. We handle the rest. Bulk orders or one-of-a-kind, we do it all.</p>
+      <p class="hero-sub">You bring the design. We handle the rest. Bulk orders or one of a kind, we do it all.</p>
       <a href="#quote" class="btn-primary">Get a free quote</a>
     </div>
     <div class="hero-logo">
-      <img src="/static/img/logo.png" alt="Every Corner Tees">
+      <img src="/static/img/logo-circle.png" alt="Every Corner Tees">
     </div>
     <div class="hero-tags">
       <span>Weddings</span>
@@ -75,18 +80,21 @@
       <div class="steps">
         <div class="step">
           <div class="step-num">01</div>
+          <div class="step-bear"><img src="/static/img/bear-announce.png" alt=""></div>
           <h3>Send us your designs</h3>
           <p>Upload your artwork or email it to us. We accept PNG, PDF, AI, SVG, EPS and CDR. Not sure about placement or sizing? We will help figure it out.</p>
         </div>
         <div class="step">
           <div class="step-num">02</div>
+          <div class="step-bear"><img src="/static/img/bear-wink.png" alt=""></div>
           <h3>We send you a mockup</h3>
-          <p>Before we print anything, we send you a mockup showing exactly how your shirt will look. Front, back, sleeve — you approve it, then we get to work.</p>
+          <p>Before we transfer anything, we send you a mockup showing exactly how your shirt will look. Front, back, sleeve. You approve it, then we get to work.</p>
         </div>
         <div class="step">
           <div class="step-num">03</div>
+          <div class="step-bear"><img src="/static/img/bear-thankyou.png" alt=""></div>
           <h3>Pick up your order</h3>
-          <p>Your design is printed onto DTF film and heat pressed directly onto your shirt. Permanent, vibrant and wash-safe. Pick up in Brampton, GTA delivery available.</p>
+          <p>Your design is printed onto DTF film and heat pressed directly onto your shirt. Permanent, vibrant and wash safe. Pick up in Brampton or GTA delivery available for $8.99.</p>
         </div>
       </div>
     </div>
@@ -115,9 +123,16 @@
 
   <section class="quote-section" id="quote">
     <div class="container">
-      <p class="section-label">Get started</p>
-      <h2>Request a quote</h2>
-      <p class="form-intro">Fill this out and we will get back to you within 24 hours. Upload your designs here, no need to email separately.</p>
+      <div class="quote-header">
+        <div>
+          <p class="section-label">Get started</p>
+          <h2>Request a quote</h2>
+          <p class="form-intro">Fill this out and we will get back to you within 24 hours. Upload your designs here, no need to email separately.</p>
+        </div>
+        <div class="quote-bear">
+          <img src="/static/img/bear-wave.png" alt="">
+        </div>
+      </div>
 
       <form id="quote-form" enctype="multipart/form-data">
 
@@ -176,14 +191,6 @@
             <label class="size-check"><input type="checkbox" name="shirt_sizes" value="2XL"> 2XL</label>
             <label class="size-check"><input type="checkbox" name="shirt_sizes" value="3XL"> 3XL</label>
             <div class="size-break"></div>
-            <div class="size-group-label">Ladies</div>
-            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Ladies XS"> XS</label>
-            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Ladies S"> S</label>
-            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Ladies M"> M</label>
-            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Ladies L"> L</label>
-            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Ladies XL"> XL</label>
-            <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Ladies 2XL"> 2XL</label>
-            <div class="size-break"></div>
             <div class="size-group-label">Youth</div>
             <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Youth XS"> YXS</label>
             <label class="size-check"><input type="checkbox" name="shirt_sizes" value="Youth S"> YS</label>
@@ -200,7 +207,7 @@
             <div class="upload-inner" id="upload-trigger">
               <div class="upload-icon">↑</div>
               <p>Drag files here or <span class="upload-link">browse</span></p>
-              <p class="upload-hint">PNG, PDF, AI, SVG, EPS, CDR — min 300 DPI — up to 50MB</p>
+              <p class="upload-hint">PNG, PDF, AI, SVG, EPS, CDR at minimum 300 DPI</p>
             </div>
             <div id="file-list" class="file-list"></div>
           </div>
@@ -229,9 +236,13 @@
         <a href="/" class="logo">Every Corner <span>Tees</span></a>
         <p>Custom t-shirts for events, weddings, businesses and teams.<br>Greater Toronto Area.</p>
       </div>
+      <div class="footer-center">
+        <img src="/static/img/bear-mascot.png" alt="Every Corner Tees bear mascot" class="footer-bear">
+      </div>
       <div class="footer-links">
         <a href="https://instagram.com/everycornertees" target="_blank" rel="noopener">@everycornertees</a>
         <a href="mailto:hello@everycornertees.ca">hello@everycornertees.ca</a>
+        <span>Brampton, ON</span>
       </div>
     </div>
     <div class="footer-bottom">2025 Every Corner Tees. Brampton, ON.</div>
