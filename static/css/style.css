@@ -599,3 +599,55 @@ footer {
   .footer-inner { flex-direction: column; gap: 24px; }
   .footer-links { align-items: flex-start; }
 }
+
+/* ── SIZE GROUP LABELS ── */
+.size-group-label {
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-top: 8px;
+  margin-bottom: 2px;
+}
+
+.size-break { width: 100%; height: 0; }
+
+/* ── DIFF CARDS (replacing single stat) ── */
+.diff-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.diff-card {
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 24px 32px;
+  text-align: center;
+  min-width: 180px;
+}
+
+.diff-card-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.diff-card-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-top: 8px;
+}
